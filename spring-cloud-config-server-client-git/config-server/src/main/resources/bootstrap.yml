@@ -1,0 +1,29 @@
+encrypt:
+  key: abcdef
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rajzz9/spring-cloud-config-server
+          #username:
+          #password:
+          #Git repo by default it will not look inside the folder, to retrive that we need add below serach-path
+          search-paths:
+          - client*
+          #Data will load from repo by forecelly
+          force-pull: true
+        encrypt:
+          enabled: false
+        health:
+          repositories:
+            appgit:
+              name: clientdb
+              profiles: default
+              
+  security:
+    user:
+      name: rootUser
+      password: rootUser
+      

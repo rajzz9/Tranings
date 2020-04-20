@@ -1,0 +1,23 @@
+encrypt:
+  key: abcdef
+  
+#name of the properties file
+spring:
+  application:
+    name: client1db
+  profiles:
+    active:
+    - default
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888
+      username: rootUser
+      password: rootUser
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh
