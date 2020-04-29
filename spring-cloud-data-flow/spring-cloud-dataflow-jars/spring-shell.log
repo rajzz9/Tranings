@@ -1,0 +1,11 @@
+// dataflow 1.2.0.RELEASE log opened at 2020-04-29 19:23:01
+// [failed] app register --name product-service --type source --uri maven://come.spring.vardhan:product-service:jar:0.0.1:SNAPSHOT
+// dataflow 1.2.0.RELEASE log opened at 2020-04-29 19:27:35
+app register --name product-service --type source --uri maven://com.spring.vardhan:product-service:jar:0.0.1:SNAPSHOT
+app register --name product-service --type processor --uri maven://com.spring.vardhan:discount-service:jar:0.0.1:SNAPSHOT
+// dataflow 1.2.0.RELEASE log opened at 2020-04-29 19:33:03
+app register --name product-service --type source --uri maven://com.spring.vardhan:product-service:jar:0.0.1-SNAPSHOT
+app register --name discount-service --type processor --uri maven://com.spring.vardhan:discount-service:jar:0.0.1-SNAPSHOT
+app register --name courier-service --type sink --uri maven://com.spring.vardhan:courier-service:jar:0.0.1-SNAPSHOT
+exit
+// dataflow 1.2.0.RELEASE log closed at 2020-04-29 19:58:18
