@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: client-mysql-db
+  cloud:
+    config:
+      uri: http://localhost:8888
+      
+  
