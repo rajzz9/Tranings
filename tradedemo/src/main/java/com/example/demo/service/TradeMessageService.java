@@ -18,7 +18,7 @@ public class TradeMessageService {
 		DbResult dbResult = new DbResult();
 		dbResult.setTradeMessage(tradeMessage);
 		AccountReference accRef = dbResult.insertAccountReference(tradeMessage.getAccountreference());
-		//SecurityReference secRef = dbResult.insertSecurityReference(tradeMessage.getSecurityReferecne());
+		SecurityReference secRef = dbResult.insertSecurityReference(tradeMessage.getSecurityReferecne());
 		//if (null != accRef && null != secRef) {
 			//Trade trade = dbResult.insertTrade(accRef, secRef, tradeMessage.getTrade());
 			//dbResult.insertRefernceId(trade, tradeMessage.getHeader());
