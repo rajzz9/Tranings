@@ -22,30 +22,31 @@ public class TradeMessageService {
 
     @Transactional
     public DbResult saveTradeMessage(TradeMessage tradeMessage) {
-        log.info("Trade message: " + tradeMessage);
+        log.debug("Trade message: " + tradeMessage);
         //DbResult dbResult = new DbResult();
         dbResult.setTradeMessage(tradeMessage);
         try {
             AccountReference accRef = dbResult.insertAccountReference1(tradeMessage.getAccountreference());
             log.info("Account ref: " + accRef);
-//            SecurityReference secRef = dbResult.insertSecurityReference(tradeMessage.getSecurityReferecne());
-//            log.info("Security ref: " + secRef);
-//            if (null != accRef && null != secRef) {
-//                log.info("Security refId: " + secRef.getSecurityId() + "Account refId: " + accRef.getAccountType());
-//                Trade trade = dbResult.insertTrade(accRef, secRef, tradeMessage.getTrade());
-//                dbResult.insertRefernceId(trade, tradeMessage.getHeader());
-//                log.info("ReferenceId data inserted record successfully");
+            SecurityReference secRef = dbResult.insertSecurityReference(tradeMessage.getSecurityReferecne());
+            log.info("Security ref: " + secRef);
+            if (null != accRef && null != secRef) {
+                log.debug("Security refId: " + secRef.getSecurityId() + " Account refId: " + accRef.getAccountId());
+                Trade trade = dbResult.insertTrade(accRef, secRef, tradeMessage.getTrade());
+                log.debug("Trade data inserted record successfully");
+                dbResult.insertRefernceId(trade, tradeMessage.getHeader());
+                log.debug("ReferenceId data inserted record successfully");
 //                dbResult.insertMoney(trade, tradeMessage.getFiguration());
-//                log.info("Money data inserted record successfully");
+//                log.debug("Money data inserted record successfully");
 //                dbResult.insertTrailerInput(trade, tradeMessage.getTrailer().getInTrailerInput());
-//                log.info("TrailerInput data inserted record successfully");
+//                log.debug("TrailerInput data inserted record successfully");
 //                dbResult.insertTrailerOutput(trade, tradeMessage.getTrailer().getInTrailerOutput());
-//                log.info("TrailerOutput data inserted record successfully");
+//                log.debug("TrailerOutput data inserted record successfully");
                 dbResult.setResult(true);
-//            } else {
-//                dbResult.setResult(false);
-//				log.error("Issue in Account and Security reference");
-//            }
+            } else {
+                dbResult.setResult(false);
+				log.error("Issue in Account and Security reference");
+            }
         } catch (Exception exception) {
             exception.printStackTrace();
 			Error error = new Error();

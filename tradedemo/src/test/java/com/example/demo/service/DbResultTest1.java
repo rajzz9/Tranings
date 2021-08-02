@@ -33,6 +33,7 @@ public class DbResultTest1 {
 
         // Expected Output
         com.example.demo.entity.AccountReference accRef = new com.example.demo.entity.AccountReference();
+        accRef.setAccountId("1234567890");
         accRef.setAccountNumer(789456);
         accRef.setAccountType("UBC");
         accRef.setKeyAccount("123456876");

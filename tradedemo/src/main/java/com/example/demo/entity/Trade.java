@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -44,4 +45,16 @@ public class Trade extends AuditModel {
 	@Column(name = "amount")
 	private BigDecimal amount;
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Trade trade = (Trade) o;
+		return Objects.equals(accountReference, trade.accountReference) && Objects.equals(securityReference, trade.securityReference) && Objects.equals(numQty, trade.numQty) && Objects.equals(amount, trade.amount);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(accountReference, securityReference, numQty, amount);
+	}
 }

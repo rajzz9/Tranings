@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "security_ref")
 @NoArgsConstructor
@@ -29,4 +31,17 @@ public class SecurityReference extends AuditModel {
 	private String accountType;
 	@Column(name = "key_sec")
 	private String keyAccount;
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		SecurityReference that = (SecurityReference) o;
+		return Objects.equals(accountNumer, that.accountNumer) && Objects.equals(accountType, that.accountType) && Objects.equals(keyAccount, that.keyAccount);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(accountNumer, accountType, keyAccount);
+	}
 }
