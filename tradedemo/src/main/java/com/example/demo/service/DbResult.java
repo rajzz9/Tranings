@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.example.demo.repository.BaseRepository;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +22,7 @@ import com.example.demo.util.DbResultMapper;
 import lombok.Setter;
 
 @Component
-@Setter
+@Setter@Getter
 public class DbResult {
 
 	private boolean result;
@@ -32,23 +34,38 @@ public class DbResult {
 	 private EntityManager entityManager;
 	 
 	//@Autowired private AccountReferenceRepository accountReferenceRepository;
+
+	@Autowired
+	private BaseRepository<AccountReference, String> accountReferenceRepository;
 	
 	@Autowired
 	private DbResultMapper dbResultMapper;
 	
 	public AccountReference insertAccountReference(com.example.demo.dto.AccountReference accountRef) {
 		AccountReference accountReference = null;
-		accountReference = this.getAccountRef(accountRef);
+		accountReference = this.getAccountRefFromDB(accountRef);
 		if(null == accountReference) {
 			accountReference = dbResultMapper.accountReferenceMapper(accountRef);
 			entityManager.persist(accountReference);
+			this.result = true;
 		} else {
 			entityManager.merge(accountReference);
 		}
 		return accountReference;
 	}
-	
-	private AccountReference getAccountRef(com.example.demo.dto.AccountReference accountRef) {
+
+	public AccountReference insertAccountReference1(com.example.demo.dto.AccountReference accountRef) {
+		AccountReference accountReference = null;
+		accountReference = this.getAccountRefFromDB(accountRef);
+		if(null == accountReference) {
+			accountReference = dbResultMapper.accountReferenceMapper(accountRef);
+			accountReference = accountReferenceRepository.save(accountReference);
+			this.result = true;
+		}
+		return accountReference;
+	}
+
+	private AccountReference getAccountRefFromDB(com.example.demo.dto.AccountReference accountRef) {
 		return null;
 	}
 	
