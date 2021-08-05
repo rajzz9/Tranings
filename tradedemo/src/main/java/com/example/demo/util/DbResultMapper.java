@@ -3,16 +3,13 @@ package com.example.demo.util;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import com.example.demo.dto.MoneyDto;
 import com.example.demo.dto.Security;
-import com.example.demo.entity.RefernceId;
-import com.example.demo.entity.SecurityReference;
-import com.example.demo.entity.Trade;
+import com.example.demo.entity.*;
 import com.example.demo.service.DbResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import com.example.demo.entity.AccountReference;
 
 @Component
 public class DbResultMapper {
@@ -43,12 +40,13 @@ public class DbResultMapper {
 
 	public Trade tradeMapper(com.example.demo.dto.Trade trade, com.example.demo.entity.AccountReference accountRef,com.example.demo.entity.SecurityReference securityRef) {
 		Trade tradeEntity = new Trade();
-		log.debug("DbResultMapper: securityReferenceMapper: started!");
+		log.debug("DbResultMapper: tradeMapper: started!");
 		tradeEntity.setTradeId(UUID.randomUUID().toString().toUpperCase());
 		tradeEntity.setAccountReference(accountRef);
 		tradeEntity.setSecurityReference(securityRef);
 		tradeEntity.setNumQty(trade.getNumQty());
 		tradeEntity.setAmount(trade.getAmount());
+		log.debug("DbResultMapper: tradeMapper: completed!");
 		return tradeEntity;
 	}
 
@@ -59,7 +57,41 @@ public class DbResultMapper {
 		refernceIdEntity.setTrade(trade);
 		refernceIdEntity.setRefCode(refernceId.getRefCode());
 		refernceIdEntity.setRefValue(BigDecimal.valueOf(Long.parseLong(refernceId.getRefValue())));
-		log.debug("DbResultMapper: refernceIdMapper: started!");
+		log.debug("DbResultMapper: refernceIdMapper: completed!");
 		return  refernceIdEntity;
+	}
+
+	public Money moneyMapper(Trade trade, MoneyDto moneyDto) {
+		Money money = new Money();
+		log.debug("DbResultMapper: moneyMapper: started!");
+		money.setMoneyId(UUID.randomUUID().toString().toUpperCase());
+		money.setTrade(trade);
+		money.setMnyCode(moneyDto.getMoneyCode());
+		money.setMnySource(moneyDto.getMoneySource());
+		money.setMnyValue(moneyDto.getAmount());
+		log.debug("DbResultMapper: moneyMapper: completed!");
+		return money;
+	}
+
+	public TrailerInput trailerInputMapper(Trade trade, com.example.demo.dto.TrailerInput tInputDto) {
+		TrailerInput trailerInput = new TrailerInput();
+		log.debug("DbResultMapper: TrailerInput: started!");
+		trailerInput.setTrlInputId(UUID.randomUUID().toString().toUpperCase());
+		trailerInput.setTrade(trade);
+		trailerInput.setInputCode(tInputDto.getTrilerCode());
+		trailerInput.setInputValue(tInputDto.getTrilerValue());
+		log.debug("DbResultMapper: TrailerInput: completed!");
+		return trailerInput;
+	}
+
+	public TrailerOutput trailerOutputMapper(Trade trade, com.example.demo.dto.TrailerOutput tOutputDto) {
+		TrailerOutput trailerOutput = new TrailerOutput();
+		log.debug("DbResultMapper: TrailerOutput: started!");
+		trailerOutput.setTrlOutputId(UUID.randomUUID().toString().toUpperCase());
+		trailerOutput.setTrade(trade);
+		trailerOutput.setOutputCode(tOutputDto.getTrilerCode());
+		trailerOutput.setOutputValue(tOutputDto.getTrilerValue());
+		log.debug("DbResultMapper: TrailerOutput: completed!");
+		return trailerOutput;
 	}
 }

@@ -13,4 +13,5 @@ public class MoneyDto {
 	private String moneyType;
 	private String moneySource;
 	private BigDecimal amount;
+	private String moneyCode;
 }

@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.*;
+import com.example.demo.entity.Money;
 import com.example.demo.util.DbResultMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -96,7 +97,7 @@ public class DbResultTest {
 	}
 
 	@Test
-	public void testInsertRefernceId(){
+	public void test_InsertRefernceId(){
 		com.example.demo.entity.Trade trade = spy(com.example.demo.entity.Trade.class);
 		trade.setTradeId("147852369");
 		Header header = spy(Header.class);
@@ -128,6 +129,71 @@ public class DbResultTest {
 		doNothing().when(entityManager).persist(refernceIdEntity3);
 
 		boolean actual = dbResult.insertRefernceId(trade, header);
+		assertEquals(true, actual);
+	}
+
+	@Test
+	public void test_InsertMoney() {
+		com.example.demo.entity.Trade trade = spy(com.example.demo.entity.Trade.class);
+		trade.setTradeId("147852369");
+		Figuration figuration = spy(Figuration.class);
+		MoneyDto moneyDto1 = new MoneyDto("COD", "USD", BigDecimal.valueOf(339.54), "987");
+		MoneyDto moneyDto2 = new MoneyDto("Online", "ISD", BigDecimal.valueOf(399.24), "987");
+		figuration.setInOutMoney(Arrays.asList(moneyDto1, moneyDto2));
+
+		Money moneyEntity1 = new Money();
+		moneyEntity1.setMnyValue(BigDecimal.valueOf(339.54));
+		moneyEntity1.setMnySource("USD");
+		moneyEntity1.setTrade(trade);
+		moneyEntity1.setMnyCode("987");
+
+		Money moneyEntity2 = new Money();
+		moneyEntity2.setMnyValue(BigDecimal.valueOf(399.24));
+		moneyEntity2.setMnySource("ISD");
+		moneyEntity2.setTrade(trade);
+		moneyEntity2.setMnyCode("987");
+
+		doNothing().when(entityManager).persist(moneyEntity1);
+		doNothing().when(entityManager).persist(moneyEntity2);
+
+		boolean actual = dbResult.insertMoney(trade, figuration);
+		assertEquals(true, actual);
+	}
+
+	@Test
+	public void test_InsertTrailer() {
+		com.example.demo.entity.Trade trade = spy(com.example.demo.entity.Trade.class);
+		trade.setTradeId("147852369");
+		Trailer trailer = spy(Trailer.class);
+		TrailerInput tInput1 = new TrailerInput("Code1", BigDecimal.valueOf(125.21));
+		TrailerInput tInput2 = new TrailerInput("Code2", BigDecimal.valueOf(124.24));
+		TrailerOutput tOutput1 = new TrailerOutput("Code1", BigDecimal.valueOf(321.02));
+		TrailerOutput tOutput2 = new TrailerOutput("Code2", BigDecimal.valueOf(322.22));
+		trailer.setInTrailerInput(Arrays.asList(tInput1, tInput2));
+		trailer.setInTrailerOutput(Arrays.asList(tOutput1, tOutput2));
+
+		com.example.demo.entity.TrailerInput tInputEntity1 = new com.example.demo.entity.TrailerInput();
+		tInputEntity1.setTrade(trade);
+		tInputEntity1.setInputCode("Code1");
+		tInputEntity1.setInputValue(BigDecimal.valueOf(125.21));
+		com.example.demo.entity.TrailerInput tInputEntity2 = new com.example.demo.entity.TrailerInput();
+		tInputEntity2.setTrade(trade);
+		tInputEntity2.setInputCode("Code2");
+		tInputEntity2.setInputValue(BigDecimal.valueOf(124.24));
+		com.example.demo.entity.TrailerOutput tOutputEntity1 = new com.example.demo.entity.TrailerOutput();
+		tOutputEntity1.setTrade(trade);
+		tOutputEntity1.setOutputCode("Code1");
+		tOutputEntity1.setOutputValue(BigDecimal.valueOf(321.02));
+		com.example.demo.entity.TrailerOutput tOutputEntity2 = new com.example.demo.entity.TrailerOutput();
+		tOutputEntity2.setTrade(trade);
+		tOutputEntity2.setOutputCode("Code2");
+		tOutputEntity2.setOutputValue(BigDecimal.valueOf(322.22));
+		doNothing().when(entityManager).persist(tInputEntity1);
+		doNothing().when(entityManager).persist(tInputEntity2);
+		doNothing().when(entityManager).persist(tOutputEntity1);
+		doNothing().when(entityManager).persist(tOutputEntity2);
+
+		boolean actual = dbResult.insertTrailer(trade, trailer);
 		assertEquals(true, actual);
 	}
 	@Test

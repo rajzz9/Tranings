@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +32,7 @@ public class Money extends AuditModel  {
 	private static final long serialVersionUID = 8595034731424985365L;
 	@Column(name = "mny_id")
 	@Id
-	private String tradeId;
+	private String moneyId;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "trade_id", nullable = false)
 	@OnDelete(action = OnDeleteAction.CASCADE)
@@ -42,4 +43,17 @@ public class Money extends AuditModel  {
 	private String mnyCode;
 	@Column(name="mny_val")
 	private BigDecimal mnyValue;
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Money money = (Money) o;
+		return Objects.equals(trade, money.trade) && Objects.equals(mnySource, money.mnySource) && Objects.equals(mnyCode, money.mnyCode) && Objects.equals(mnyValue, money.mnyValue);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(trade, mnySource, mnyCode, mnyValue);
+	}
 }

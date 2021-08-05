@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -39,4 +40,17 @@ public class TrailerOutput extends AuditModel {
 	private String outputCode;
 	@Column(name = "output_value")
 	private BigDecimal outputValue;
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		TrailerOutput that = (TrailerOutput) o;
+		return Objects.equals(trade, that.trade) && Objects.equals(outputCode, that.outputCode) && Objects.equals(outputValue, that.outputValue);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(trade, outputCode, outputValue);
+	}
 }

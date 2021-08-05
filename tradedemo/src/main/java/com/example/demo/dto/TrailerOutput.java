@@ -10,7 +10,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class TrailerOutput {
-
 	private String trilerCode;
 	private BigDecimal trilerValue;
 }

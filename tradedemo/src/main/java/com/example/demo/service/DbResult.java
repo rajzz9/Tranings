@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.example.demo.dto.*;
+import com.example.demo.entity.Money;
 import com.example.demo.repository.BaseRepository;
 
 import org.slf4j.Logger;
@@ -144,14 +145,58 @@ public class DbResult {
 	}
 	
 	public boolean insertMoney(Trade trade, Figuration figuration) {
-		return false;
+		boolean status = false;
+		log.debug("Money : tradeId: " + trade.getTradeId());
+		if(null != figuration && figuration.getInOutMoney().size() > 0){
+			List<MoneyDto> moneyList = figuration.getInOutMoney();
+			log.debug("Money : size: " + moneyList.size());
+			for (MoneyDto moneyDto : moneyList) {
+				Money moneyEntity = null;
+				log.debug("Money : DTO to Entity object");
+				moneyEntity = dbResultMapper.moneyMapper(trade, moneyDto);
+				entityManager.persist(moneyEntity);
+				log.debug("Money : Entity persisted into DB");
+				status =  true;
+				this.result = true;
+				log.info("Money saved into DB, Id: " + moneyEntity.getMoneyId());
+			}
+		}
+		return status;
 	}
-	
-	public boolean insertTrailerInput(Trade trade, List<com.example.demo.dto.TrailerInput> trilerInputs) {
-		return false;	
+
+	public boolean insertTrailer(Trade trade, Trailer trailer){
+		boolean status = false;
+		log.debug("Trailer : tradeId: " + trade.getTradeId());
+		if(null != trailer && trailer.getInTrailerInput().size() > 0) {
+			List<TrailerInput> trailerInputs = trailer.getInTrailerInput();
+			log.debug("TrailerInput : size: " + trailerInputs.size());
+			for (TrailerInput tInput : trailerInputs) {
+				com.example.demo.entity.TrailerInput tInputEntity = null;
+				log.debug("TrailerInput : DTO to Entity object");
+				tInputEntity = dbResultMapper.trailerInputMapper(trade, tInput);
+				entityManager.persist(tInputEntity);
+				log.debug("TrailerInput : Entity persisted into DB");
+				status =  true;
+				this.result = true;
+				log.info("TrailerInput saved into DB, Id: " + tInputEntity.getTrlInputId());
+			}
+		}
+		if(status && null != trailer && trailer.getInTrailerOutput().size() > 0) {
+			List<TrailerOutput> trailerOutputs = trailer.getInTrailerOutput();
+			log.debug("TrailerOutput : size: " + trailerOutputs.size());
+			for (TrailerOutput tOutput: trailerOutputs) {
+				com.example.demo.entity.TrailerOutput tOutputEntity = null;
+				log.debug("TrailerOutput : DTO to Entity object");
+				tOutputEntity = dbResultMapper.trailerOutputMapper(trade, tOutput);
+				entityManager.persist(tOutputEntity);
+				log.debug("TrailerOutput : Entity persisted into DB");
+				status =  true;
+				this.result = true;
+				log.info("TrailerOutput saved into DB, Id: " + tOutputEntity.getTrlOutputId());
+			}
+		}
+		return status;
 	}
-	
-	public boolean insertTrailerOutput(Trade trade, List<TrailerOutput> trailerOutputs) {
-		return false;
-	}
+
+
 }
