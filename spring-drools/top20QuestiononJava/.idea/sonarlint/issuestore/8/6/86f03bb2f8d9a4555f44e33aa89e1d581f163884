@@ -1,0 +1,7 @@
+
+b	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(λ²Άs
+M
+java:S1197"8Move the array designator from the variable to the type.(λ²Άs
+N	java:S106"9Replace this use of System.out or System.err by a logger.(°ΎΪ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(τ¥™Η
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ψχωÿÿÿÿ
