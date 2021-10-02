@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c55acce9-138a-41b1-8fa1-8875645a8066" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../spring-drools/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/java/com/vardhan/springdrools/SpringDroolsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/java/com/vardhan/springdrools/api/DroolConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/java/com/vardhan/springdrools/api/MegaOfferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/java/com/vardhan/springdrools/api/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/main/resources/offer.drl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-drools/src/test/java/com/vardhan/springdrools/SpringDroolsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86f03bb2f8d9a4555f44e33aa89e1d581f163884" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b0f13ead474e4082caaeae83205097b6dd34d3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/RemoveDuplicateElementFromList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q10_CountWindowDistinct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q1_DuplicateElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q2_SecondlargestElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q3_MaximumConsecutive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q4_PairsOfElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q5_SubArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q6_IntersectionOfTwoArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q7_MissingNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q8_FrequencyofeachElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q9_HammingDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/strings/Harisha_Testing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/strings/Q1_DuplicateCharacters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/strings/Q2_Anagrams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/strings/Q3_BlancedBrackets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vardhan/corejava/strings/Q4_SubStrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/RemoveDuplicateElementFromList$C.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/RemoveDuplicateElementFromList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q10_CountWindowDistinct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q1_DuplicateElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q2_SecondlargestElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q3_MaximumConsecutive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q4_PairsOfElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q5_SubArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q6_IntersectionOfTwoArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q7_MissingNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q8_FrequencyofeachElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/arrays/Q9_HammingDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/strings/Harisha_Testing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/strings/Q1_DuplicateCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/strings/Q2_Anagrams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/strings/Q3_BlancedBrackets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vardhan/corejava/strings/Q4_SubStrings.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1xzokPabovbbC0apHmSNcLQiwAL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../spring-drools &amp; Java interviewQandA/top20QuestiononJava" />
+  </component>
+  <component name="RunManager" selected="Application.Harisha_Testing">
+    <configuration name="Harisha_Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vardhan.corejava.strings.Harisha_Testing" />
+      <module name="top20QuestiononJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vardhan.corejava.strings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Q3_MaximumConsecutive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vardhan.corejava.arrays.Q3_MaximumConsecutive" />
+      <module name="top20QuestiononJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vardhan.corejava.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Q4_PairsOfElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vardhan.corejava.arrays.Q4_PairsOfElements" />
+      <module name="top20QuestiononJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vardhan.corejava.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveDuplicateElementFromList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vardhan.corejava.RemoveDuplicateElementFromList" />
+      <module name="top20QuestiononJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vardhan.corejava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vardhan.corejava.arrays.Test" />
+      <module name="top20QuestiononJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vardhan.corejava.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Harisha_Testing" />
+        <item itemvalue="Application.Q3_MaximumConsecutive" />
+        <item itemvalue="Application.RemoveDuplicateElementFromList" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Q4_PairsOfElements" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c55acce9-138a-41b1-8fa1-8875645a8066" name="Changes" comment="" />
+      <created>1631367421232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631367421232</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vardhan/corejava/arrays/Q7_MissingNumber.java</url>
+          <line>31</line>
+          <properties class="com.vardhan.corejava.arrays.Q7_MissingNumber" method="findDisappearedNumbers">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
