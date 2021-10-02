@@ -1,0 +1,12 @@
+
+I
+java:S1612",Replace this lambda with a method reference.(º·¿ð8”õ®‚Ä/
+H
+java:S1612",Replace this lambda with a method reference.(ÿÎH8¤õ®‚Ä/
+N
+java:S1612",Replace this lambda with a method reference.(Ì‹©Ðÿÿÿÿÿ8´õ®‚Ä/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(½Ë¡÷øÿÿÿÿ8µõ®‚Ä/
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(€±Óüÿÿÿÿ8µõ®‚Ä/
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Í·Íøÿÿÿÿ8¶õ®‚Ä/
+`
+java:S1128">Remove this unused import 'java.util.function.BinaryOperator'.(Žžº÷ùÿÿÿÿ8¶õ®‚Ä/

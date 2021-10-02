@@ -1,0 +1,6 @@
+
+Z
+java:S1854"8Remove this useless assignment to local variable "list".(í‚±Åüÿÿÿÿ8Ñ…€‚Ä/
+K
+java:S1481")Remove this unused "list" local variable.(í‚±Åüÿÿÿÿ8Ô…€‚Ä/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÈŸ§ß8Õ…€‚Ä/
